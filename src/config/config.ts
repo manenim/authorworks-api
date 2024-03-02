@@ -4,7 +4,7 @@ dotenv.config();
 
 const MONGO_USERNAME = process.env.MONGO_USERNAME || '';
 const MONGO_PASSWORD = process.env.MONGO_PASSWORD || '';
-const MONGO_URL = `mongodb+srv://${MONGO_USERNAME}:${MONGO_PASSWORD}@cluster0.cf34ntq.mongodb.net/?retryWrites=true&w=majority`; 
+const MONGO_URL = `mongodb+srv://${MONGO_USERNAME}:${MONGO_PASSWORD}@cluster0.tvrif8u.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`; 
 // mongodb+srv://${MONGO_USERNAME}:${MONGO_PASSWORD}@cluster0.cf34ntq.mongodb.net
 
 
