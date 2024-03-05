@@ -3,6 +3,7 @@ import Author from "../model/Author";
 
 const createAuthor = (req: Request, res: Response) => {
   const { name } = req.body;
+  console.log(name)
 
   const author = new Author({
     name,
@@ -11,7 +12,7 @@ const createAuthor = (req: Request, res: Response) => {
     .save()
     .then((author) =>
       res
-        .status(200)
+        .status(201)
         .json({ message: `author ${author.name} has been added to DB` })
     )
     .catch((err) => res.sendStatus(400).json({ message: err }));
@@ -62,7 +63,7 @@ const deleteAuthor = async (
 
   const author = await Author.findByIdAndDelete(authorId);
   author
-    ? res.status(201).json({ messsage: "deleted" })
+    ? res.status(201).json({ messsage: `author with ID ${authorId} has been deleted` })
     : res.status(404).json({ message: "not found" });
 };
 
