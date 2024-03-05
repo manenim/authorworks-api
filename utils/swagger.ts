@@ -6,8 +6,9 @@ const options: swaggerJsdoc.Options = {
   definition: {
     openapi: "3.0.0",
     info: {
-      title: "Books-API",
+      title: "Authorworks-API",
       version: "1.0.0",
+      description: "This API allows you to access and manage information about authors and their associated books."
     },
   },
   apis: ["./routes/*.ts"], // files containing annotations as above
