@@ -12,7 +12,7 @@ const router = express.Router();
  *      - Books
  *    summary: Add a Book
  *    requestBody:
- *      description: Adds a book with corresponding Author
+ *      description: Add a new book with their details.
  *      required: true
  *      content:
  *        application/json:

@@ -9,8 +9,8 @@ const router = express.Router();
  * /authors/create:
  *  post:
  *    tags:
- *      - Author
- *    summary: Create an Author
+ *      - Authors
+ *    summary: Create a new author with their details.
  *    requestBody:
  *      description: create an Author
  *      required: true
@@ -40,7 +40,7 @@ router.post(
  *  /authors/{id}:
  *    get:
  *      tags:
- *        - Author
+ *        - Authors
  *      summary: Get an Author
  *      parameters:
  *        - in: path
@@ -49,7 +49,7 @@ router.post(
  *            type: string
  *            default: "65e5b1041f2ce07f17f82960"
  *          required: true
- *          description: unique ID Of the author to get
+ *          description: Retrieve information about a specific author by their unique identifier.
  *      responses:
  *        200:
  *          description: 'Author with given ID'
@@ -63,11 +63,11 @@ router.get("/:id", controller.readAuthor);
  * /authors/:
  *  get:
  *    tags:
- *      - Author
+ *      - Authors
  *    summary: Get all Authors
  *    responses:
  *      200:
- *        description: 'A list of authors'
+ *        description: 'Retrieve a list of all authors with their basic information.'
  *        content:
  *          application/json:
  *            schema:
@@ -93,7 +93,7 @@ router.get("/", controller.readAllAuthor);
  *  /authors/update/{id}:
  *    patch:
  *      tags:
- *        - Author
+ *        - Authors
  *      summary: Update Author Info
  *      parameters:
  *        - in: path
@@ -102,7 +102,7 @@ router.get("/", controller.readAllAuthor);
  *            type: string
  *            default: 65e5b1041f2ce07f17f82960
  *      requestBody:
- *        description: Update Author
+ *        description: Modify the information of an existing author.
  *        required: true
  *        content:
  *          application/json:
@@ -130,8 +130,8 @@ router.patch(
  *  /authors/delete/{id}:
  *    delete:
  *      tags:
- *        - Author
- *      summary: Delete an Author
+ *        - Authors
+ *      summary: Remove an author and their associated data
  *      parameters:
  *        - in: path
  *          name: id
